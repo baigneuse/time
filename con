@@ -1,0 +1,161 @@
+#include <stdio.h>
+
+main()
+
+{
+
+    int y,m,d,x,i,k;
+
+    if (y=2017,m=11,d=9,x=28);
+
+    printf("%d %d %d %d",&y,&m,&d,&x);
+
+    i=d+x;
+
+    if((y%4==0&&y%100!=0)||(y%400==0))k=1;
+
+loop:
+
+    switch(m)
+
+    {
+
+        case 12:{ if(i<=62){if(i>31) {y++;m=1;d=i-31;break;}
+
+            else d=i;break;}
+
+            else {y++;m=1;i=i-31;goto loop;}}
+
+        case 11:{ if(i<=61){if(i>30) {m++;d=i-30;break;}
+
+            else d=i;break;}
+
+            else {m++;i=i-30;goto loop;}}
+
+        case 10:{ if(i<=61){if(i>31) {m++;d=i-31;break;}
+
+            else d=i;break;}
+
+            else {m++;i=i-31;goto loop;}}
+
+        case 9:{ if(i<=61){if(i>30) {m++;d=i-30;break;}
+
+            else d=i;break;}
+
+            else {m++;i=i-30;goto loop;}}
+
+        case 8:{ if(i<=61){if(i>31) {m++;d=i-31;break;}
+
+            else d=i;break;}
+
+            else {m++;i=i-31;goto loop;}}
+
+        case 7:{ if(i<=62){if(i>31) {m++;d=i-31;break;}
+
+            else d=i;break;}
+
+            else {m++;i=i-31;goto loop;}}
+
+        case 6:{ if(i<=61){if(i>30) {m++;d=i-30;break;}
+
+            else d=i;break;}
+
+            else {m++;i=i-30;goto loop;}}
+
+        case 5:{ if(i<=61){if(i>31) {m++;d=i-31;break;}
+
+        else d=i;break;}
+
+            else {m++;i=i-31;goto loop;}}
+
+        case 4:{ if(i<=61){if(i>30) {m++;d=i-30;break;}
+
+            else d=i;break;}else {m++;i=i-30;goto loop;}}
+
+        case 3:{ if(i<=61){if(i>31) {m++;d=i-31;break;}
+
+            else d=i;break;}
+
+            else {m++;i=i-31;goto loop;}}
+
+        case 2:{if(k==1)
+
+        { if(i<=60)
+
+            if(i>29)
+
+            { m++;d=i-29;break;}
+
+            else
+
+            { d=i;break;}
+
+            else
+
+            {m++;i=i-29;goto loop;}
+
+        }
+
+        else
+
+        { if(i<=59)
+
+            if(i>28)
+
+            { m++;d=i-28;break;}
+
+            else
+
+            { d=i;break;}
+
+            else
+
+            { m++;i=i-28;goto loop;}
+
+        }
+
+        }
+
+        case 1:{ if(k==1)
+
+        { if(i<=60)
+
+            if(i>31)
+
+            { m++;d=i-31;break;}
+
+            else
+
+            { d=i;break;}
+
+            else
+
+            {m++;i=i-31;goto loop;}
+
+        }
+
+        else
+
+        { if(i<=59)
+
+            if(i>31)
+
+            { m++;d=i-31;break;}
+
+            else
+
+            { d=i;break;}
+
+            else
+
+            {m++;i=i-31;goto loop;}
+
+        }
+
+        }
+
+    }
+
+    printf(y,m,d);
+
+}
